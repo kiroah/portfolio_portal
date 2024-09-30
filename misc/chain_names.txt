@@ -1,0 +1,141 @@
+Category	Chain name	Variations
+Gasoline Stations	76	
+Convenience Stores	7-Eleven	
+Grocery Stores	99 Ranch Market	
+Clothing & Fashion Retailers	Abercrombie & Fitch	Abercrombie & Fitch Co.
+Sporting Goods	Academy Sports + Outdoors	
+Home Improvement Stores	Ace Hardware	
+Clothing & Fashion Retailers	Adidas	
+Grocery Stores	Aldi	
+Clothing & Fashion Retailers	American Eagle Outfitters	
+Electronics & Tech Stores	Apple Store	Apple, Apple Retail Store
+Casual Dining Chains	Applebee's	Applebee's Grill + Bar
+Fast-Food Chains	Arby’s	
+Gasoline Stations	Arco	
+Furniture & Home Goods	Ashley Furniture	Ashley HomeStore
+Clothing & Fashion Retailers	Athleta	
+Auto Parts & Service	AutoZone	
+Bookstores	Barnes & Noble	Barnes and Noble
+Beauty & Cosmetics	Bath & Body Works	
+Furniture & Home Goods	Bed Bath & Beyond	
+Department Stores	Belk	
+Electronics & Tech Stores	Best Buy	
+Sporting Goods	Big 5 Sporting Goods	
+Big-Box Retailers	Big Lots	
+Big-Box Retailers	BJ’s Wholesale Club	
+Department Stores	Bloomingdale's	
+Casual Dining Chains	Buffalo Wild Wings	
+Fast-Food Chains	Burger King	
+Fast-Food Chains	Carl’s Jr.	
+Gasoline Stations	Chevron	
+Fast-Food Chains	Chick-fil-A	
+Casual Dining Chains	Chili's	
+Fast-Food Chains	Chipotle Mexican Grill	Chipotle
+Entertainment & Toys	Chuck E. Cheese	Chuck E. Cheese's
+Convenience Stores	Circle K	
+Big-Box Retailers	Costco	
+Furniture & Home Goods	Crate & Barrel	Crate and Barrel
+Drugstores/Pharmacies	CVS Pharmacy	CVS
+Entertainment & Toys	Dave & Buster’s	
+Casual Dining Chains	Denny's	
+Sporting Goods	Dick's Sporting Goods	
+Department Stores	Dillard's	DILLARDS INC
+Discount Stores	Dollar General	
+Discount Stores	Dollar Tree	
+Fast-Food Chains	Domino's Pizza	
+Fast-Food Chains	Dunkin'	Dunkin' Donuts
+Clothing & Fashion Retailers	Express	
+Gasoline Stations	ExxonMobil	Exxon Mobil
+Discount Stores	Family Dollar	Family Dollar Stores
+Discount Stores	Five Below	
+Fast-Food Chains	Five Guys	
+Home Improvement Stores	Floor & Decor	
+Clothing & Fashion Retailers	Foot Locker	
+Clothing & Fashion Retailers	Forever 21	
+Electronics & Tech Stores	GameStop	
+Clothing & Fashion Retailers	Gap	
+Grocery Stores	Gelson's Markets	
+Grocery Stores	Grocery Outlet	
+Clothing & Fashion Retailers	H&M	
+Bookstores	Half Price Books	
+Home Improvement Stores	Harbor Freight Tools	
+Home Improvement Stores	Home Depot	The Home Depot
+Furniture & Home Goods	HomeGoods	CVS
+Casual Dining Chains	IHOP	
+Furniture & Home Goods	IKEA	
+Fast-Food Chains	In-N-Out Burger	
+Fast-Food Chains	Jack in the Box	
+Department Stores	JCPenney	
+Fast-Food Chains	KFC	
+Department Stores	Kohl's	
+Clothing & Fashion Retailers	Levi's	
+Home Improvement Stores	Lowe's	Lowe's Home Improvement
+Clothing & Fashion Retailers	Lululemon	
+Department Stores	Macy's	★macys
+Fast-Food Chains	McDonald's	
+Big-Box Retailers	Menards	
+Electronics & Tech Stores	Micro Center	
+Electronics & Tech Stores	Microsoft Store	Microsoft
+Auto Parts & Service	NAPA Auto Parts	
+Department Stores	Neiman Marcus	
+Clothing & Fashion Retailers	Nike	
+Department Stores	Nordstrom	
+Auto Parts & Service	O'Reilly Auto Parts	Oreilly Automotive, Inc.
+Office Supplies	Office Depot	
+Office Supplies	OfficeMax	
+Clothing & Fashion Retailers	Old Navy	
+Casual Dining Chains	Olive Garden	
+Casual Dining Chains	Outback Steakhouse	
+Casual Dining Chains	P.F. Chang's	
+Clothing & Fashion Retailers	PacSun	
+Fast-Food Chains	Panda Express	Panda Restaurant Group
+Auto Parts & Service	Pep Boys	
+Pet Stores	Pet Food Express	
+Pet Stores	Pet Supplies Plus	
+Pet Stores	Petco	
+Pet Stores	PetSmart	
+Furniture & Home Goods	Pier 1 Imports	PIER 1 IMPORTS INC/DE
+Fast-Food Chains	Pizza Hut	
+Fast-Food Chains	Popeyes	Popeyes Louisiana Kitchen
+Furniture & Home Goods	Pottery Barn	
+Grocery Stores	Ralphs	
+Casual Dining Chains	Red Lobster	
+Casual Dining Chains	Red Robin	
+Sporting Goods	REI	
+Drugstores/Pharmacies	Rite Aid	
+Furniture & Home Goods	Rooms To Go	
+Grocery Stores	Safeway	
+Department Stores	Saks Fifth Avenue	
+Beauty & Cosmetics	Sally Beauty Supply	
+Big-Box Retailers	Sam's Club	
+Department Stores	Sears	
+Beauty & Cosmetics	Sephora	
+Gasoline Stations	Shell	
+Grocery Stores	Smart & Final	Smart and Final
+Fast-Food Chains	Sonic Drive-In	Sonic
+Grocery Stores	Sprouts Farmers Market	
+Office Supplies	Staples	
+Fast-Food Chains	Starbucks	
+Fast-Food Chains	Subway	
+Fast-Food Chains	Taco Bell	
+Big-Box Retailers	Target	
+Gasoline Stations	Texaco	
+Casual Dining Chains	Texas Roadhouse	
+Casual Dining Chains	TGI Friday's	
+Casual Dining Chains	The Cheesecake Factory	
+Entertainment & Toys	Toys "R" Us	"Toys“R”Us, Toys 'R' Us	"
+Home Improvement Stores	Tractor Supply Co.	
+Grocery Stores	Trader Joe's	
+Beauty & Cosmetics	Ulta Beauty	
+Clothing & Fashion Retailers	Uniqlo	
+Clothing & Fashion Retailers	Urban Outfitters	
+Gasoline Stations	Valero	
+Clothing & Fashion Retailers	Victoria's Secret	
+Grocery Stores	Vons	
+Drugstores/Pharmacies	Walgreens	
+Big-Box Retailers	Walmart	
+Fast-Food Chains	Wendy's	
+Furniture & Home Goods	West Elm	
+Grocery Stores	Whole Foods Market	Whole Foods
+Grocery Stores	WinCo Foods	
+Clothing & Fashion Retailers	Zara	
