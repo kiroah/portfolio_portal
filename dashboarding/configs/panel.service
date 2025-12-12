@@ -1,0 +1,14 @@
+[Unit]
+Description=Panel Server
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/var/www/apps
+Environment="PATH=/var/www/apps/venv/bin"
+# Added --prefix /panel back.
+# IMPORTANT: --allow-websocket-origin must match your MAIN domain now (hironai.to)
+ExecStart=/var/www/apps/venv/bin/panel serve panel_app.py --address 127.0.0.1 --port 5006 --prefix /panel --allow-websocket-origin=hironai.to
+
+[Install]
+WantedBy=multi-user.target

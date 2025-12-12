@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn instance to serve Dash
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/var/www/apps
+Environment="PATH=/var/www/apps/venv/bin"
+# Run Gunicorn on port 8050
+ExecStart=/var/www/apps/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:8050 dash_app:server
+
+[Install]
+WantedBy=multi-user.target
