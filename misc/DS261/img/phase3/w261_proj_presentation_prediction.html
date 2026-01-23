@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Years Prediction</title>
+
+    <style>
+        :root {
+            --primary-color: #0969da;
+            --secondary-color: #1f6feb;
+            --accent-color: #da3633;
+            --success-color: #2ea043;
+            --warning-color: #f39c12;
+            --light-bg: #ffffff;
+            --dark-bg: #24292f;
+            --border-color: #d0d7de;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292f;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #ffffff;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 600;
+            text-shadow: 0 0 20px rgba(9, 105, 218, 0.15);
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(140, 149, 159, 0.15);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(140, 149, 159, 0.25);
+            border-color: var(--primary-color);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        th {
+            background: var(--primary-color);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        tr:hover {
+            background-color: rgba(175, 184, 193, 0.15);
+        }
+
+        .summary-box h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="section">
+    <h2>XGBoost Recent Years Prediction (2020-2024)</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Metric</th>
+            <th>2020</th>
+            <th>2021</th>
+            <th>2022</th>
+            <th>2023</th>
+            <th>2024</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Accuracy</td>
+            <td><b><span style="color: #da3633;">0.6980</span></b></td>
+            <td>0.7049</td>
+            <td>0.7010</td>
+            <td>0.7103</td>
+            <td><span style="color: #2ea043; font-weight: bold;">0.7115</span></td>
+        </tr>
+        <tr>
+            <td>F1 Macro</td>
+            <td><b><span style="color: #da3633;">0.5252</span></b></td>
+            <td>0.6054</td>
+            <td>0.6250</td>
+            <td>0.6280</td>
+            <td><span style="color: #2ea043; font-weight: bold;">0.6294</span></td>
+        </tr>
+        <tr>
+            <td>Precision</td>
+            <td><b><span style="color: #da3633;">0.1549</span></b></td>
+            <td>0.3134</td>
+            <td>0.3726</td>
+            <td>0.3695</td>
+            <td><span style="color: #2ea043; font-weight: bold;">0.3733</span></td>
+        </tr>
+        <tr>
+            <td>Recall</td>
+            <td><b><span style="color: #da3633;">0.5210</span></b></td>
+            <td>0.5814</td>
+            <td>0.5881</td>
+            <td><span style="color: #2ea043; font-weight: bold;">0.5854</span></td>
+            <td>0.5824</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="section">
+    <h2>Logistic Regression Recent Years Prediction (2020-2024)</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Metric</th>
+            <th>2020</th>
+            <th>2021</th>
+            <th>2022</th>
+            <th>2023</th>
+            <th>2024</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Accuracy</td>
+            <td><b><span style="color: #da3633;">0.6365</span></b></td>
+            <td>0.6589</td>
+            <td>0.6660</td>
+            <td>0.6677</td>
+            <td><span style="color: #2ea043; font-weight: bold;">0.6708</span></td>
+        </tr>
+        <tr>
+            <td>F1 Macro</td>
+            <td><b><span style="color: #da3633;">0.4924</span></b></td>
+            <td>0.5710</td>
+            <td>0.5969</td>
+            <td>0.5951</td>
+            <td><span style="color: #2ea043; font-weight: bold;">0.5979</span></td>
+        </tr>
+        <tr>
+            <td>Precision</td>
+            <td><b><span style="color: #da3633;">0.1378</span></b></td>
+            <td>0.2764</td>
+            <td>0.3380</td>
+            <td>0.3286</td>
+            <td><span style="color: #2ea043; font-weight: bold;">0.3334</span></td>
+        </tr>
+        <tr>
+            <td>Recall</td>
+            <td><b><span style="color: #da3633;">0.5706</span></b></td>
+            <td>0.5911</td>
+            <td>0.5911</td>
+            <td><span style="color: #2ea043; font-weight: bold;">0.5957</span></td>
+            <td>0.5922</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="section">
+    <h2>MLP Recent Years Prediction (2020-2024)</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Metric</th>
+            <th>2020</th>
+            <th>2021</th>
+            <th>2022</th>
+            <th>2023</th>
+            <th>2024</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Accuracy</td>
+            <td><b><span style="color: #da3633;">0.6243</span></b></td>
+            <td>0.6492</td>
+            <td>0.6588</td>
+            <td>0.6708</td>
+            <td><span style="color: #2ea043; font-weight: bold;">0.6723</span></td>
+        </tr>
+        <tr>
+            <td>F1 Macro</td>
+            <td><b><span style="color: #da3633;">0.4859</span></b></td>
+            <td>0.5646</td>
+            <td>0.5926</td>
+            <td>0.5986</td>
+            <td><span style="color: #2ea043; font-weight: bold;">0.6005</span></td>
+        </tr>
+        <tr>
+            <td>Precision</td>
+            <td><b><span style="color: #da3633;">0.1352</span></b></td>
+            <td>0.2707</td>
+            <td>0.3332</td>
+            <td>0.3325</td>
+            <td><span style="color: #2ea043; font-weight: bold;">0.3363</span></td>
+        </tr>
+        <tr>
+            <td>Recall</td>
+            <td><b><span style="color: #da3633;">0.5803</span></b></td>
+            <td>0.5972</td>
+            <td>0.5997</td>
+            <td><span style="color: #2ea043; font-weight: bold;">0.6017</span></td>
+            <td>0.6007</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
+    

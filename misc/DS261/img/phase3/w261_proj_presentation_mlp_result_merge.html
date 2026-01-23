@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTPWV2_60M_2015</title>
+
+    <style>
+        :root {
+            --primary-color: #0969da;
+            --secondary-color: #1f6feb;
+            --accent-color: #da3633;
+            --success-color: #2ea043;
+            --warning-color: #f39c12;
+            --light-bg: #ffffff;
+            --dark-bg: #24292f;
+            --border-color: #d0d7de;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292f;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            background: #ffffff;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 600;
+            text-shadow: 0 0 20px rgba(9, 105, 218, 0.15);
+        }
+
+        table {
+            width: 95%;
+            max-width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        th {
+            background: var(--primary-color);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        tr:hover {
+            background-color: rgba(175, 184, 193, 0.15);
+        }
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<table class="summary-table">
+    <thead>
+    <tr>
+        <th rowspan="2">Metric</th>
+        <th colspan="3">Validation Baseline</th>
+        <th colspan="3">Validation</th>
+        <th colspan="3">Test Baseline</th>
+        <th colspan="3">Test</th>
+    </tr>
+    <tr>
+        <th>Overall</th>
+        <th>Delay</th>
+        <th>No&nbsp;Delay</th>
+        <th>Overall</th>
+        <th>Delay</th>
+        <th>No&nbsp;Delay</th>
+        <th>Overall</th>
+        <th>Delay</th>
+        <th>No&nbsp;Delay</th>
+        <th>Overall</th>
+        <th>Delay</th>
+        <th>No&nbsp;Delay</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Accuracy</td>
+        <td><b>0.8162</b></td>
+        <td>-</td>
+        <td>-</td>
+        <td>0.6505</td>
+        <td>-</td>
+        <td>-</td>
+        <td><b>0.8133</b></td>
+        <td>-</td>
+        <td>-</td>
+        <td>0.6479</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>F1 Macro</td>
+        <td>0.4494</td>
+        <td>0.0000</td>
+        <td>0.8988</td>
+        <td><b>0.5795</b></td>
+        <td>0.4068</td>
+        <td>0.7522</td>
+        <td>0.4485</td>
+        <td>0.0000</td>
+        <td>0.8970</td>
+        <td><b>0.5766</b></td>
+        <td>0.4028</td>
+        <td>0.7503</td>
+    </tr>
+    <tr>
+        <td>Precision</td>
+        <td>0.0000</td>
+        <td>0.0000</td>
+        <td>0.8162</td>
+        <td><b>0.2956</b></td>
+        <td>0.2956</td>
+        <td>0.8924</td>
+        <td>0.0000</td>
+        <td>0.0000</td>
+        <td>0.8133</td>
+        <td><b>0.2947</b></td>
+        <td>0.2947</td>
+        <td>0.8861</td>
+    </tr>
+    <tr>
+        <td>Recall</td>
+        <td>0.0000</td>
+        <td>0.0000</td>
+        <td>1.0000</td>
+        <td><b>0.6520</b></td>
+        <td>0.6520</td>
+        <td>0.6501</td>
+        <td>0.0000</td>
+        <td>0.0000</td>
+        <td>1.0000</td>
+        <td><b>0.6358</b></td>
+        <td>0.6358</td>
+        <td>0.6507</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

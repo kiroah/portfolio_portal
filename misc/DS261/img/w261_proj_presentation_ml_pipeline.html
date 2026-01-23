@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #ffffff !important;
+            color: #24292f !important;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .pipeline-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #24292f !important;
+        }
+
+        .pipeline-title {
+            text-align: center;
+            color: #0969da !important;
+            margin-bottom: 20px;
+            font-size: 42px;
+            font-weight: 600;
+            text-shadow: 0 0 20px rgba(9, 105, 218, 0.15);
+            letter-spacing: 0.5px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif !important;
+        }
+
+        .title-icon {
+            display: inline-block;
+            font-size: 52px;
+            vertical-align: middle;
+            margin-right: 10px;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1;
+            position: relative;
+            top: -12px;
+        }
+
+        .pipeline-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pipeline-block {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: #ffffff;
+            border: 1px solid #d0d7de;
+            box-shadow: 0 8px 24px rgba(140, 149, 159, 0.15);
+        }
+
+        .pipeline-block:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(140, 149, 159, 0.25);
+            border-color: #0969da;
+        }
+
+        .block-header {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background 0.2s ease;
+        }
+
+        .block-header:hover {
+            background: rgba(9, 105, 218, 0.05);
+        }
+
+        .block-header:active {
+            background: rgba(9, 105, 218, 0.1);
+        }
+
+        .block-title {
+            font-weight: 600;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #ffffff !important;
+        }
+
+        .block-icon {
+            font-size: 24px;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            flex-shrink: 0;
+            font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif !important;
+            font-style: normal;
+        }
+
+        .toggle-icon {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+            color: #ffffff !important;
+            font-weight: bold;
+        }
+
+        .toggle-icon.collapsed {
+            transform: rotate(-90deg);
+        }
+
+        .block-content {
+            max-height: 1000px;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.3s ease;
+            opacity: 1;
+        }
+
+        .block-content.collapsed {
+            max-height: 0;
+            padding: 0 !important;
+            opacity: 0;
+        }
+
+        .block-details {
+            padding: 8px 25px 8px 25px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #24292f !important;
+        }
+
+        .block-details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .block-details li {
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            background: rgba(175, 184, 193, 0.15);
+            border-left: 3px solid;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            color: #24292f !important;
+        }
+
+        .block-details li:last-child {
+            margin-bottom: 0;
+        }
+
+        .block-details li:hover {
+            background: rgba(175, 184, 193, 0.25);
+            transform: translateX(5px);
+        }
+
+        .block-details strong {
+            color: #0969da !important;
+        }
+
+        /* Specific block styling */
+
+        .configuration .block-header {
+            background: linear-gradient(135deg, #1f6feb 0%, #0d419d 100%);
+        }
+        .configuration .block-icon {
+            background: rgba(31, 111, 235, 0.2);
+        }
+        .configuration .block-details li {
+            border-left-color: #58a6ff;
+        }
+
+        .model-training .block-header {
+            background: linear-gradient(135deg, #da3633 0%, #b62324 100%);
+        }
+        .model-training .block-icon {
+            background: rgba(218, 54, 51, 0.2);
+        }
+        .model-training .block-details li {
+            border-left-color: #f85149;
+        }
+
+        .model-evaluation .block-header {
+            background: linear-gradient(135deg, #2ea043 0%, #1a7f37 100%);
+        }
+        .model-evaluation .block-icon {
+            background: rgba(46, 160, 67, 0.2);
+        }
+        .model-evaluation .block-details li {
+            border-left-color: #3fb950;
+        }
+
+        .model-deployment .block-header {
+            background: linear-gradient(135deg, #8957e5 0%, #6e40c9 100%);
+        }
+        .model-deployment .block-icon {
+            background: rgba(137, 87, 229, 0.2);
+        }
+        .model-deployment .block-details li {
+            border-left-color: #a371f7;
+        }
+
+        .arrow {
+            font-size: 32px;
+            color: #0969da !important;
+            text-shadow: 0 0 10px rgba(9, 105, 218, 0.3);
+        }
+
+        .split-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .split-block {
+            width: 100%;
+        }
+
+        /* Collapse all button */
+        .controls {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .control-btn {
+            background: linear-gradient(135deg, #6e7681 0%, #484f58 100%);
+            color: white !important;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(110, 118, 129, 0.3);
+            margin: 0 5px;
+        }
+
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(110, 118, 129, 0.4);
+            background: linear-gradient(135deg, #7d8590 0%, #545d68 100%);
+        }
+
+        .control-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .pipeline-title {
+                font-size: 24px;
+            }
+
+            .split-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="pipeline-container">
+    <h2 class="pipeline-title"><span class="title-icon">🛫</span>Flight Delay Prediction ML Pipeline</h2>
+
+    <div class="controls">
+        <button class="control-btn" onclick="expandAll()">Expand All</button>
+        <button class="control-btn" onclick="collapseAll()">Collapse All</button>
+    </div>
+
+    <div class="pipeline-flow">
+
+        <!-- Data Processing -->
+        <div class="pipeline-block configuration">
+            <div class="block-header" onclick="toggleBlock(this)">
+                <div class="block-title">
+                    <div class="block-icon">🎛️</div>
+                    <span>Configure Hyperparameter</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="block-content">
+                <div class="block-details">
+                    <ul>
+                        <li>Configure hyperparameter settings for different task purposes or for grid search</li>
+                        <li>Define the data time frame based on exploration or prediction goals</li>
+                        <li>Specify the train/test split ratio</li>
+                        <li><strong>Choose a cross-validation strategy:</strong>
+                            <ul>
+                                <li>Standard k-fold cross-validation</li>
+                                <li>Time-based rolling cross-validation to prevent data leakage</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <!-- Model Training -->
+        <div class="pipeline-block model-training">
+            <div class="block-header" onclick="toggleBlock(this)">
+                <div class="block-title">
+                    <div class="block-icon">🔮</div>
+                    <span>Model Training</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="block-content">
+                <div class="block-details">
+                    <ul>
+                        <li>Binary classification of departure delay</li>
+                        <li>Baseline: Logistic Regression</li>
+                        <li><strong>Algorithms:</strong>
+                            <ul>
+                                <li>Multinomial Logistic Regression</li>
+                                <li>Decision Tree Classifier</li>
+                                <li>Random Forest Classifier</li>
+                                <li>Gradient Boosted Trees (GBT)</li>
+                                <li>Optional: Multilayer Perceptron (MLP)</li>
+                                <li>Optional: Residual Multilayer Perceptron</li>
+                            </ul>
+                        </li>
+                        <li>Hyperparameter tuning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <!-- Model Evaluation -->
+        <div class="pipeline-block model-evaluation">
+            <div class="block-header" onclick="toggleBlock(this)">
+                <div class="block-title">
+                    <div class="block-icon">📈</div>
+                    <span>Model Evaluation</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="block-content">
+                <div class="block-details">
+                    <ul>
+                        <li><strong>Class-specific performance metrics:</strong>
+                            <ul>
+                                <li>Accuracy</li>
+                                <li>Precision</li>
+                                <li>Recall</li>
+                                <li>F1</li>
+                            </ul>
+                        </li>
+                        <li>Analyze the confusion matrix</li>
+                        <li>Compare models across algorithms</li>
+                        <li>Hyperparameter tuning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <!-- Deployment -->
+        <div class="pipeline-block model-deployment">
+            <div class="block-header" onclick="toggleBlock(this)">
+                <div class="block-title">
+                    <div class="block-icon">📦</div>
+                    <span>Model Inference</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="block-content">
+                <div class="block-details">
+                    <ul>
+                        <li>Real-time prediction on new pre-departure data</li>
+                        <li><strong>Optional: test COVID’s impact on airline delays:</strong>
+                            <ul>
+                                <li>Prediction on new data during COVID</li>
+                                <li>Prediction on new data post-COVID</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+  function toggleBlock(header) {
+    const content = header.nextElementSibling;
+    const icon = header.querySelector('.toggle-icon');
+
+    content.classList.toggle('collapsed');
+    icon.classList.toggle('collapsed');
+  }
+
+  function collapseAll() {
+    const contents = document.querySelectorAll('.block-content');
+    const icons = document.querySelectorAll('.toggle-icon');
+
+    contents.forEach(content => {
+      content.classList.add('collapsed');
+    });
+
+    icons.forEach(icon => {
+      icon.classList.add('collapsed');
+    });
+  }
+
+  function expandAll() {
+    const contents = document.querySelectorAll('.block-content');
+    const icons = document.querySelectorAll('.toggle-icon');
+
+    contents.forEach(content => {
+      content.classList.remove('collapsed');
+    });
+
+    icons.forEach(icon => {
+      icon.classList.remove('collapsed');
+    });
+  }
+</script>
+</body>
+</html>
